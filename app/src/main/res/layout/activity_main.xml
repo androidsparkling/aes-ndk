@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/et_plaintext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="明文"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:gravity="left|top"
+        android:textSize="13sp"
+        android:layout_weight="2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="encryption"
+            android:text="AES加密"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decrypt"
+            android:text="AES解密"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择加密方式"/>
+        <Spinner
+
+            android:id="@+id/sn_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:entries="@array/elementsArray"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_ciphertext"
+        android:gravity="left|top"
+        android:hint="密文"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+</LinearLayout>
